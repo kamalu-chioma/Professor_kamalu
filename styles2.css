@@ -13,12 +13,6 @@ body {
     padding: 20px;
 }
 
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        padding: 10px;
-    }
-
 /* Header Section */
 header {
     background-color: #444;
@@ -119,4 +113,63 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+/* Media Queries */
+
+/* For screens less than 768px (tablet and phone view) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 22px; /* Adjust header font size */
+    }
+
+    .page-menu ul li {
+        display: block; /* Stack menu items vertically */
+        margin: 5px 0;
+    }
+
+    .page-menu ul li a {
+        font-size: 14px; /* Adjust menu font size */
+    }
+
+    main {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    ol li {
+        font-size: 14px; /* Adjust publication list font size */
+    }
+
+    footer {
+        font-size: 12px; /* Smaller footer text for mobile */
+    }
+}
+
+/* For screens less than 480px (small phones) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 20px; /* Further reduce header font size */
+    }
+
+    .page-menu ul li a {
+        font-size: 12px; /* Smaller menu font */
+    }
+
+    main {
+        padding: 8px; /* Compact padding for small phones */
+    }
+
+    ol li {
+        font-size: 12px; /* Compact publication list text */
+        line-height: 1.6;
+    }
+
+    footer {
+        padding: 10px; /* Compact footer */
+    }
 }
